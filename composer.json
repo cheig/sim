@@ -1,0 +1,15 @@
+{
+  "name" : "myBlog PHP",
+  "description": "PHP Framewoek",
+  "type": "Framework",
+  "keywords": [
+    "PHP","PHP Framework"
+  ],
+  "require": {
+    "php":">= 5.4.45",
+    "filp/whoops":"*",
+    "symfony/var-dumper":"*",
+    "catfan/medoo":"*",
+    "twig/twig": "*"
+  }
+}

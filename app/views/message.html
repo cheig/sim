@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+
+{% block content %}
+<h1>Pink Contact Form</h1>
+<div class="login-01">
+    <form method="post" action="save">
+        <ul>
+            <li class="first">
+                <a href="#" class=" icon user"></a>
+                <input type="text" class="text" name="name" value="Name" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Name';}" >
+                <div class="clear"></div>
+            </li>
+            <li class="first">
+                <a href="#" class=" icon email"></a>
+                <input type="text" class="text" name="email" value="Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Email';}" >
+                <div class="clear"></div>
+            </li>
+            <li class="first">
+                <a href="#" class=" icon phone"></a>
+                <input type="text" class="text" name="phone" value="Phone" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Phone';}" >
+                <div class="clear"></div>
+            </li>
+            <li class="second">
+                <a href="#" class=" icon msg"></a>
+                <textarea value="Message" name="content" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Comments';}">Comments</textarea>
+                <div class="clear"></div>
+            </li>
+        </ul>
+        <input type="submit" onClick="myFunction()" value="Submit" >
+        <div class="clear"></div>
+    </form>
+</div>
+{% endblock %}

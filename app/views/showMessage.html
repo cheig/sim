@@ -1,0 +1,81 @@
+{% extends "template.html" %}
+
+{% block content %}
+<header data-v-f736ef30="" class="top eye-protector-processed" style="transition: background-color 0.3s ease 0s; background-color: rgb(193, 230, 198);">
+    <a data-v-f736ef30="" href="javascript:;" class="drop-icon">
+        <img data-v-f736ef30="" src="/app/views/images/dropmenu1.svg" alt="">
+    </a>
+    <section data-v-f736ef30="" style="position: relative;"><!----></section>
+    <h2 data-v-f736ef30="" class="site-name router-link-active">Blog</h2>
+    <ul data-v-f736ef30="" class="drop-menu" id="menu">
+        <li data-v-f736ef30="">
+            <a data-v-f736ef30="" href="/" class="router-link-active">首页</a>
+        </li>
+        <li data-v-f736ef30="">
+            <a data-v-f736ef30="" href="/?cate=fe" class="">前端设计</a>
+        </li>
+        <li data-v-f736ef30="">
+            <a data-v-f736ef30="" href="/?cate=php" class="">PHP</a></li>
+        <li data-v-f736ef30="">
+            <a data-v-f736ef30="" href="/?cate=go" class="">GoLang</a>
+        </li>
+        <li data-v-f736ef30="">
+            <a data-v-f736ef30="" href="/?cate=other" class="">杂谈</a>
+        </li>
+        <li data-v-f736ef30="">
+            <a data-v-f736ef30="" href="/link" class="">友情链接</a>
+        </li>
+    </ul>
+    <section data-v-f736ef30="" class="search">
+        <img data-v-f736ef30="" src="/app/views/images/search.svg" alt="">
+        <input data-v-f736ef30="" type="text" placeholder="搜索 O(∩_∩)O~~" class="keyword eye-protector-processed" style="transition: background-color 0.3s ease 0s; background-color: rgb(193, 230, 198);">
+    </section>
+</header>
+<section data-v-15646442="" class="pageHeader">
+    <h2 data-v-15646442="">He110's Blog</h2>
+    <section data-v-15646442="" class="intro">手握日月摘星辰，世间无我这般人</section>
+    <ul data-v-15646442="">
+        <li data-v-15646442="">
+            <a data-v-15646442="" href="https://github.com/">
+                <img data-v-15646442="" src="/app/views/images/github.svg" alt="GitHub">
+            </a>
+        </li>
+        <li data-v-15646442="">
+            <a data-v-15646442="" href="http://blog.he110.info">
+                <img data-v-15646442="" src="/app/views/images/home.svg" alt="Blog">
+            </a>
+        </li>
+        <li data-v-15646442="">
+            <a data-v-15646442="" href="http://wpa.qq.com/msgrd?v=3&amp;uin=810535237&amp;site=qq&amp;menu=yes">
+                <img data-v-15646442="" src="/app/views/images/qq.svg" alt="OICQ">
+            </a>
+        </li>
+        <li data-v-15646442="">
+            <a data-v-15646442="" href="mailto:i@he110.info">
+                <img data-v-15646442="" src="/app/views/images/mail.svg" alt="Mail">
+            </a>
+        </li>
+    </ul>
+</section>
+<div class="login-01">
+    <section style="display:inline-block;float:right; ">
+        <a href="index/test">添加留言</a>
+    </section>
+    <ul data-v-6f47eb74="" class="list">
+        {% for val in data %}
+        <li data-v-6f47eb74="" class="eye-protector-processed" style="transition: background-color 0.3s ease 0s;
+         background-color: rgb(193, 230, 198);">
+            <h3 data-v-6f47eb74="" class="eye-protector-processed" style="border-bottom-color: rgba(0, 0, 0, 0.35);">
+                <a data-v-6f47eb74="" href="/detail/0" class="">{{ val.title }}</a>
+            </h3>
+            <section data-v-6f47eb74="" class="desc">{{ val.content }}</section>
+            <section data-v-6f47eb74="" class="footer eye-protector-processed" style="border-top-color: rgba(0, 0, 0, 0.35);">
+                <section data-v-6f47eb74="" class="date"> {{ val.createtime|date('Y-m-d H:i:s')}}</section>
+                <a data-v-6f47eb74="" href="/detail/0" class="more">阅读全文 &gt;</a>
+            </section>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="clear"></div>
+</div>
+{% endblock %}
